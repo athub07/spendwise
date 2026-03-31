@@ -126,6 +126,6 @@ There might be small bugs here and there but nothing major as far as tested.
 
 ## 👤 Author
 
-Aviraj Singh Thakur
-25BCE10894
-VIT Bhopal University, Sehore, MP
+Aviraj Singh Thakur   
+25BCE10894   
+VIT Bhopal University, Sehore, MP   
