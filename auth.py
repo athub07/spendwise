@@ -6,14 +6,14 @@ USERS_FILE = "users.json"
 
 
 # =========================
-# 🔐 HASH FUNCTION
+#  HASH FUNCTION
 # =========================
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
 
 # =========================
-# 📂 LOAD USERS
+#  LOAD USERS
 # =========================
 def load_users():
     if not os.path.exists(USERS_FILE):
@@ -27,7 +27,7 @@ def load_users():
 
 
 # =========================
-# 💾 SAVE USERS
+#  SAVE USERS
 # =========================
 def save_users(users):
     with open(USERS_FILE, "w") as file:
@@ -35,7 +35,7 @@ def save_users(users):
 
 
 # =========================
-# 📝 SIGNUP
+#  SIGNUP
 # =========================
 def signup():
     users = load_users()
@@ -46,7 +46,7 @@ def signup():
     # Check if user exists
     for user in users:
         if user["username"] == username:
-            print("❌ User already exists")
+            print(" User already exists")
             return None
 
     # Store hashed password
@@ -56,12 +56,12 @@ def signup():
     })
 
     save_users(users)
-    print("✅ Signup successful!")
+    print(" Signup successful!")
     return username
 
 
 # =========================
-# 🔑 LOGIN
+#  LOGIN
 # =========================
 def login():
     users = load_users()
@@ -73,8 +73,8 @@ def login():
 
     for user in users:
         if user["username"] == username and user["password"] == hashed_input:
-            print("✅ Login successful!")
+            print(" Login successful!")
             return username
 
-    print("❌ Invalid credentials")
+    print(" Invalid credentials")
     return None
